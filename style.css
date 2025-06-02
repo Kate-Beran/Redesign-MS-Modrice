@@ -1,0 +1,384 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f7f7;
+  color: #2d3748;
+}
+header {
+  background-color: #fff9e5;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #1a535c;
+}
+nav {
+  display: flex;
+}
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav > ul > li {
+  position: relative;
+}
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ff7f50;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+nav a:hover,
+nav li:hover > a {
+  color: #1a535c;
+}
+nav a.kids {
+  color: #66bfa6;
+}
+nav a.kids:hover {
+  color: #1a535c;
+}
+/* Dropdown styles */
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff9e5;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul ul li {
+  width: 100%;
+}
+nav ul ul li a {
+  padding: 10px 20px;
+  color: #2d3748;
+  font-weight: 500;
+}
+nav ul ul li a:hover {
+  background-color: #ffd966;
+  color: #1a535c;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block; /* odstraní mezery pod obrázkem */
+  object-fit: cover; /* hezké přizpůsobení */
+}
+.hero {
+  background-color: #ffd966;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #1a535c;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #1a535c;
+}
+
+.hero {
+  background-color: #fddc69; /* základní žlutá */
+  background-image: radial-gradient(
+      circle 120px at 20% 30%,
+      rgba(255, 223, 186, 0.8) 99%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle 150px at 70% 70%,
+      rgba(255, 182, 193, 0.6) 99%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle 100px at 50% 50%,
+      rgba(144, 238, 144, 0.7) 99%,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.aktuality {
+  background-color: #f9f7f7; /* světlá béžová */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.aktuality h2 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #1a535c; /* tmavá modrozelená */
+  margin-bottom: 40px;
+}
+
+.aktuality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.aktualita {
+  background: #fff9e5; /* světle žlutá */
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.aktualita:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aktualita-nadpis {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #ff7f50; /* oranžová */
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.aktualita-nadpis:hover {
+  color: #1a535c; /* tmavá modrozelená */
+}
+
+.aktualita-popisek {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.aktualita-odkaz {
+  font-style: normal;
+  color: #2d3748; /* tmavá modrozelená */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.aktualita-odkaz:hover {
+  color: #1a535c;
+}
+
+.archiv-btn-wrapper {
+  text-align: center;
+}
+
+.archiv-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f28c6b;
+  color: white;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  padding: 14px 40px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* důležité, aby se nic nezobrazovalo mimo tlačítko */
+}
+
+.archiv-btn span {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+  transform-origin: left center;
+}
+
+/* Animace při hoveru */
+.archiv-btn:hover span {
+  transform: scaleX(2);
+}
+
+.archiv-btn:hover {
+  background-color: #1a535c;
+}
+
+/*footer {
+  background-color: #fff9e5;
+  color: #2d3748;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+} */
+nav > ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
+  position: relative; /* pro absolutní submenu */
+}
+
+/* Odkazy hlavního menu */
+nav a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ff7f50;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav li:hover > a {
+  color: #1a535c;
+}
+
+/* --- DROPDOWN PRVNÍ ÚROVNĚ (POD HLAVNÍMI POLOŽKAMI) --- */
+nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* zobraz pod rodičem */
+  left: 0;
+  background-color: #fff9e5;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+  flex-direction: column;
+  /* další styly */
+}
+
+/* --- DROPDOWN DRUHÉ ÚROVNĚ (SUBMENU UVNITŘ SUBMENU) --- */
+nav ul ul ul {
+  position: absolute;
+  top: 0;
+  left: 100%; /* výchozí - otevření doprava */
+  right: auto;
+}
+
+/* Zobrazení dropdownu, pokud má rodič třídu open */
+nav li.open > ul {
+  display: block; /* block místo flex pro stabilnější zobrazení */
+}
+
+/* Přepnutí na otevření vlevo */
+nav li.left > ul {
+  left: auto !important;
+  right: 100% !important;
+}
+/* Šířka položek v dropdown */
+nav ul ul li {
+  width: 100%;
+  position: relative; /* pro případ dalšího submenu */
+}
+nav li.submenu {
+  position: relative; /* pro absolutní pozicování submenu vůči rodiči */
+}
+
+nav li.submenu > ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* výchozí vertikální pozice pod rodičem */
+  left: 0; /* výchozí zarovnání vlevo */
+  flex-direction: column;
+  background: #fff9e5;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+}
+footer {
+  background-color: #fff9e5; /* světlá béžová */
+  color: #1a535c; /* tmavě modrozelená */
+  padding: 40px 20px;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-contact,
+.footer-links {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+
+.footer-contact h4,
+.footer-links h4 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  color: #ff7f50; /* oranžová */
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #1a535c;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #1a535c;
+
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff7f50;
+  text-decoration: underline;
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
